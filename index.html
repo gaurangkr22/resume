@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f8fc">
+    <meta name="description" content="Smart Hospital Management System development dashboard preview.">
+    <title>Gaurang Hospital Group — Smart Hospital Operations</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <a class="brand-link" href="#" aria-label="Gaurang Hospital Group home">
+            <span class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+            </span>
+            <span class="brand-copy"><strong>Gaurang</strong><small>HOSPITAL GROUP</small></span>
+          </a>
+          <button class="icon-button mobile-close" id="closeMenu" aria-label="Close navigation" type="button">×</button>
+        </div>
+
+        <div class="workspace-card">
+          <span class="workspace-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-4h4v4"/></svg>
+          </span>
+          <span><strong>Gaurang Hospital Group</strong><small>Development preview</small></span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </div>
+
+        <p class="nav-label">WORKSPACE</p>
+        <nav class="navigation" aria-label="Main navigation">
+          <button class="nav-item active" data-view="overview" aria-current="page" type="button">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>
+            <span>Overview</span>
+          </button>
+          <button class="nav-item" data-view="departments" type="button">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-4h4v4"/></svg>
+            <span>Departments</span><span class="nav-count">17</span>
+          </button>
+          <button class="nav-item" data-view="staffing" type="button">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M10 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6m3-3h-6"/></svg>
+            <span>Staffing plan</span>
+          </button>
+          <button class="nav-item nav-future" data-view="patients" type="button">
+            <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3M16 3h5v5M10 14 21 3M8 8h4M8 12h2"/></svg>
+            <span>Patient records</span><span class="phase-tag">PHASE 2</span>
+          </button>
+          <button class="nav-item nav-future" data-view="appointments" type="button">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+            <span>Appointments</span><span class="phase-tag">PHASE 2</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">HOSPITAL OPERATIONS</p>
+          <button class="nav-item nav-future" data-view="beds" type="button">
+            <svg viewBox="0 0 24 24"><path d="M3 19V8m0 8h18v3M5 16v-5h5a4 4 0 0 1 4 4v1M14 13h4a3 3 0 0 1 3 3M7 8h.01"/></svg>
+            <span>Beds & wards</span><span class="phase-tag">PHASE 3</span>
+          </button>
+          <button class="nav-item nav-future" data-view="emergency" type="button">
+            <svg viewBox="0 0 24 24"><path d="M10 10H6l-3 4v5h18v-6l-3-3h-4M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 10l2-5h4l2 5M12 6v4m-2-2h4"/></svg>
+            <span>Emergency & fleet</span><span class="phase-tag">PHASE 4</span>
+          </button>
+          <button class="nav-item nav-future" data-view="diagnostics" type="button">
+            <svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v7.5L5 19a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-8.5V3M8 17h8"/></svg>
+            <span>Diagnostics & pharmacy</span><span class="phase-tag">PHASE 5</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="help-card"><span class="help-mark">?</span><span><strong>Building in phases</strong><small>Phase 1 · Setup preview</small></span><span class="help-arrow">↗</span></div>
+          <div class="profile">
+            <span class="avatar">HA</span><span class="profile-copy"><strong>Hospital admin</strong><small>Development account</small></span>
+            <button class="icon-button profile-menu" type="button" aria-label="Account options">···</button>
+          </div>
+        </div>
+      </aside>
+
+      <button class="mobile-backdrop" id="mobileBackdrop" aria-label="Close navigation"></button>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button mobile-menu" id="openMenu" aria-label="Open navigation" type="button">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <div class="breadcrumbs"><span>Hospital workspace</span><span class="slash">/</span><strong id="breadcrumbCurrent">Overview</strong></div>
+          </div>
+          <div class="topbar-right">
+            <span class="environment-pill demo-pill"><i></i> Simulated demo</span>
+            <button class="demo-control" id="demoToggle" type="button" aria-pressed="true"><span class="demo-control-dot"></span><span id="demoToggleLabel">Pause demo</span></button>
+            <button class="icon-button notification-button" type="button" aria-label="Notifications unavailable in preview">
+              <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+              <span class="notification-dot"></span>
+            </button>
+            <span class="top-avatar">H</span>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <div class="preview-banner">
+            <span class="preview-symbol">≈</span>
+            <span><strong>SIMULATED LIVE DEMO — all operational figures and records are synthetic</strong><small>For interface demonstration only. No real hospital, patient, staffing, ambulance, GPS, or clinical system is connected.</small></span>
+            <span class="preview-updated" id="lastUpdated">Demo snapshot · just now</span>
+            <button class="preview-label" id="refreshDemo" type="button">Refresh demo ↻</button>
+          </div>
+
+          <section class="view-panel active" id="view-overview" aria-labelledby="page-title">
+            <div class="page-heading">
+              <div><p class="eyebrow"><span class="pulse"></span> HOSPITAL AT A GLANCE</p><h1 id="page-title">Good morning, team <span class="sparkle">✦</span></h1><p class="page-subtitle">Your development workspace, clearly separated from live operations.</p></div>
+              <div class="date-chip"><span class="date-icon">▦</span><span id="todayDate"></span></div>
+            </div>
+
+            <section class="welcome-hero" aria-label="Hospital workspace introduction">
+              <div class="welcome-copy">
+                <span class="welcome-kicker"><span class="welcome-kicker-dot"></span> GAURANG HOSPITAL GROUP · DEVELOPMENT PREVIEW</span>
+                <h2>One clearer view of hospital operations.</h2>
+                <p>Explore a connected workspace concept for teams, capacity, and day-to-day coordination.</p>
+                <button class="welcome-button" data-view-link="departments" type="button">Explore departments <span aria-hidden="true">→</span></button>
+                <small class="welcome-disclaimer">Illustrative imagery · Demo figures are synthetic</small>
+              </div>
+              <div class="welcome-photos">
+                <img class="welcome-building" src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="Illustrative hospital building exterior" fetchpriority="high">
+                <figure class="welcome-photo-inset">
+                  <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Illustrative clinician using a mobile device">
+                  <figcaption>Care teams, connected</figcaption>
+                </figure>
+                <span class="photo-caption">Illustrative hospital photography</span>
+              </div>
+            </section>
+
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-icon blue"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M15 10h.01M9 14h.01M15 14h.01M10 21v-4h4v4"/></svg></span>
+                <div class="metric-copy"><span class="metric-label">Physical bed capacity</span><strong id="metricPhysical">1,000</strong><span class="metric-foot">Simulated demo inventory</span></div>
+                <span class="metric-tag">DEMO</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon teal"><svg viewBox="0 0 24 24"><path d="M3 19V8m0 8h18v3M5 16v-5h5a4 4 0 0 1 4 4v1M14 13h4a3 3 0 0 1 3 3"/></svg></span>
+                <div class="metric-copy"><span class="metric-label">Staffed beds</span><strong id="metricStaffed">820 <small>/ 950 operational</small></strong><span class="metric-foot"><span id="metricStaffedPct">86%</span> of operational beds</span></div>
+                <span class="metric-tag">DEMO</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon violet"><svg viewBox="0 0 24 24"><path d="M3 19V8m0 8h18v3M5 16v-5h5a4 4 0 0 1 4 4v1M14 13h4a3 3 0 0 1 3 3"/></svg></span>
+                <div class="metric-copy"><span class="metric-label">Occupied beds</span><strong id="metricOccupied">684 <small>/ 820 staffed</small></strong><span class="metric-foot"><span id="metricOccupancy">83%</span> staffed-bed occupancy · simulated</span></div>
+                <span class="metric-tag">DEMO</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon amber"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg></span>
+                <div class="metric-copy"><span class="metric-label">Appointments today</span><strong id="metricAppointments">148</strong><span class="metric-foot"><span id="metricCheckedIn">21 checked in</span> · simulated queue</span></div>
+                <span class="metric-tag">DEMO</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-icon rose"><svg viewBox="0 0 24 24"><path d="M10 10H6l-3 4v5h18v-6l-3-3h-4M7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 10l2-5h4l2 5M12 6v4m-2-2h4"/></svg></span>
+                <div class="metric-copy"><span class="metric-label">Ambulances available</span><strong id="metricAmbulances">12 <small>/ 30</small></strong><span class="metric-foot">Simulated fleet status · no GPS</span></div>
+                <span class="metric-tag">DEMO</span>
+              </article>
+            </div>
+
+            <div class="dashboard-grid">
+              <section class="card capacity-card">
+                <div class="card-heading"><div><p class="card-kicker">SIMULATED DEMO SNAPSHOT</p><h2>Bed occupancy by department</h2></div><button class="subtle-button" data-view-link="beds" type="button">Bed operations <span>→</span></button></div>
+                <div class="bed-capacity-summary"><span><strong id="demoPhysical">1,000</strong><small>physical</small></span><span><strong id="demoOperational">950</strong><small>operational</small></span><span><strong id="demoStaffed">820</strong><small>staffed</small></span><span><strong id="demoAvailable">96</strong><small>available</small></span></div>
+                <div class="legend"><span><i class="legend-target"></i> Planning capacity</span><span><i class="legend-allocated"></i> Simulated occupied</span></div>
+                <div class="department-chart" id="departmentChart"></div>
+                <div class="chart-footer"><span><i class="legend-allocated"></i> Simulated occupancy: <strong id="demoOccupiedTotal">684 beds</strong></span><span>Illustrative data · not a real census</span></div>
+                <div class="capacity-breakdown"><span>Reserved <strong id="demoReserved">40</strong></span><span>Cleaning <strong id="demoCleaning">22</strong> <small>(in unstaffed)</small></span><span>Maintenance <strong id="demoMaintenance">50</strong></span><span title="Operational but not staffed; includes beds in cleaning">Operational, unstaffed <strong id="demoUnstaffed">130</strong></span></div>
+              </section>
+
+              <div class="side-stack">
+                <section class="card snapshot-card">
+                  <div class="card-heading"><div><p class="card-kicker">CONFIGURATION</p><h2>Workspace snapshot</h2></div><span class="snapshot-mark">⌘</span></div>
+                  <div class="snapshot-row"><span>Departments configured</span><strong>17</strong></div>
+                  <div class="snapshot-row"><span>Specialty planning groups</span><strong>17</strong></div>
+                  <div class="snapshot-row"><span>Doctors on duty</span><strong id="doctorsOnDuty">186 / 250</strong></div>
+                  <div class="snapshot-row"><span>Emergency arrivals</span><strong id="emergencyArrivals">18 today</strong></div>
+                  <div class="snapshot-row"><span>Pending lab orders</span><strong id="pendingLabs">34</strong></div>
+                  <button class="snapshot-link" data-view-link="emergency" type="button">View emergency demo <span>↗</span></button>
+                </section>
+                <section class="card workforce-card">
+                  <div class="card-heading"><div><p class="card-kicker">SIMULATED DAILY ACTIVITY</p><h2>Recent updates</h2></div><span class="workforce-icon">↻</span></div>
+                  <div class="activity-list" id="activityList"></div>
+                  <p class="workforce-note">Synthetic activity examples; not real patient or clinical events.</p>
+                  <button class="snapshot-link" data-view-link="staffing" type="button">Review staffing plan <span>↗</span></button>
+                </section>
+                <div class="data-note"><span class="note-icon">◷</span><span><strong>Demo refresh</strong><small id="refreshStatus">Synthetic snapshot refreshes automatically</small></span><i class="status-indicator"></i></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="view-panel" id="view-departments" aria-labelledby="departments-title" hidden>
+            <div class="page-heading">
+              <div><p class="eyebrow"><span class="eyebrow-square">▦</span> HOSPITAL CONFIGURATION</p><h1 id="departments-title">Departments & capacity</h1><p class="page-subtitle">Review planning targets separately from actual allocations.</p></div>
+              <label class="search-box"><span>⌕</span><input id="departmentSearch" type="search" placeholder="Search departments" aria-label="Search departments"></label>
+            </div>
+            <div class="table-summary">
+              <div><span class="summary-label">Configured hospital capacity</span><strong>1,000 <small>beds</small></strong></div>
+              <div><span class="summary-label">Department planning targets</span><strong>1,010 <small>beds</small></strong></div>
+              <div><span class="summary-label">Simulated beds occupied</span><strong id="departmentDemoOccupied">684 <small>demo only</small></strong></div>
+              <span class="over-target-badge">Synthetic live demo</span>
+            </div>
+            <section class="card table-card">
+              <div class="table-card-heading"><div><p class="card-kicker">SYNTHETIC DEVELOPMENT SCENARIO</p><h2>Department capacity & demo occupancy</h2></div><span class="table-status demo-status"><i></i> Simulated · not real</span></div>
+              <div class="table-scroll"><table><thead><tr><th>Department</th><th>Planning target</th><th>Demo occupied</th><th>Actual bed inventory</th><th>Target share</th></tr></thead><tbody id="departmentRows"></tbody><tfoot><tr><th>Supplied department targets</th><th>1,010 beds</th><th id="departmentDemoTotal">684 demo</th><th>Not connected</th><th>101%</th></tr></tfoot></table></div>
+            </section>
+            <p class="view-footnote">Planning and occupancy figures are synthetic demo data. The real hospital database and bed inventory are not connected. Supplied target rows total 1,010 against the 1,000-bed planning ceiling.</p>
+          </section>
+
+          <section class="view-panel" id="view-staffing" aria-labelledby="staffing-title" hidden>
+            <div class="page-heading">
+              <div><p class="eyebrow"><span class="eyebrow-square">♙</span> WORKFORCE CONFIGURATION</p><h1 id="staffing-title">Doctor staffing plan</h1><p class="page-subtitle">Illustrative staffing targets—not doctors employed, verified, or on duty.</p></div>
+              <span class="readiness-pill demo-readiness"><i></i> Simulated demo + planning</span>
+            </div>
+            <div class="plan-callout staffing-callout"><span class="callout-icon">!</span><span>The supplied specialty staffing targets total <strong>290 doctors</strong>, while the stated hospital target is <strong>250</strong>. The duty roster shown below is a synthetic demo—not employed or verified staff.</span></div>
+            <div class="table-summary staffing-summary">
+              <div><span class="summary-label">Hospital planning target</span><strong>250 <small>doctors</small></strong></div>
+              <div><span class="summary-label">Specialty plan total</span><strong>290 <small>planned</small></strong></div>
+              <div><span class="summary-label">Demo duty roster</span><strong id="staffDemoDuty">186 <small>simulated on duty</small></strong></div>
+              <span class="over-target-badge">Synthetic data</span>
+            </div>
+            <section class="card table-card">
+              <div class="table-card-heading"><div><p class="card-kicker">PLANNING + SYNTHETIC SHIFT EXAMPLE</p><h2>Targets by specialty</h2></div><span class="table-status demo-status"><i></i> Demo shift roster</span></div>
+              <div class="table-scroll"><table><thead><tr><th>Specialty</th><th>Planned doctors</th><th>Demo shift example</th><th>Verified staff records</th></tr></thead><tbody id="staffingRows"></tbody><tfoot><tr><th>Supplied specialty targets</th><th>290 planned</th><th>186 simulated</th><th>Not connected</th></tr></tfoot></table></div>
+            </section>
+            <p class="view-footnote">Shift examples cycle as demo data. No clinician identities, credentials, availability, employment, or real duty rosters are connected or verified.</p>
+          </section>
+
+          <section class="view-panel" id="view-patients" aria-labelledby="patients-title" hidden>
+            <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-square">▤</span> PHASE 2 · PATIENT WORKFLOWS</p><h1 id="patients-title">Patient flow demo</h1><p class="page-subtitle">Synthetic queue examples only—there are no actual patient records here.</p></div><span class="readiness-pill demo-readiness"><i></i> Synthetic examples</span></div>
+            <div class="table-summary"><div><span class="summary-label">Demo encounters</span><strong id="demoEncounterCount">6 <small>examples</small></strong></div><div><span class="summary-label">Simulated waiting</span><strong id="demoWaitingCount">21 <small>examples</small></strong></div><span class="over-target-badge">No real patient data</span></div>
+            <section class="card table-card"><div class="table-card-heading"><div><p class="card-kicker">FICTIONAL PLACEHOLDER IDENTITIES</p><h2>Sample patient queue</h2></div><span class="table-status demo-status"><i></i> Not actual patients</span></div>
+              <div class="table-scroll"><table><thead><tr><th>Demo reference</th><th>Clinic</th><th>Queue status</th><th>Arrival</th><th>Assignment</th></tr></thead><tbody id="patientRows"></tbody></table></div>
+            </section>
+            <p class="view-footnote">Patient Demo A, B, and similar labels are fictional placeholders. No names, medical record numbers, contact details, diagnoses, or actual medical data are used.</p>
+          </section>
+
+          <section class="view-panel" id="view-appointments" aria-labelledby="appointments-title" hidden>
+            <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-square">▦</span> PHASE 2 · CARE SCHEDULING</p><h1 id="appointments-title">Appointment schedule demo</h1><p class="page-subtitle">Example clinic schedule; clinician availability is not real or bookable.</p></div><span class="readiness-pill demo-readiness"><i></i> Simulated schedule</span></div>
+            <div class="table-summary"><div><span class="summary-label">Today's demo schedule</span><strong id="demoAppointmentCount">148 <small>examples</small></strong></div><div><span class="summary-label">Checked in (demo)</span><strong id="demoCheckins">21 <small>examples</small></strong></div><div><span class="summary-label">Clinic example</span><strong>Outpatient <small>demo</small></strong></div><span class="over-target-badge">Not bookable</span></div>
+            <section class="card table-card"><div class="table-card-heading"><div><p class="card-kicker">SYNTHETIC SCHEDULE ROWS</p><h2>Upcoming sample appointments</h2></div><span class="table-status demo-status"><i></i> Not a real schedule</span></div>
+              <div class="table-scroll"><table><thead><tr><th>Time</th><th>Patient reference</th><th>Department</th><th>Clinician</th><th>Status</th></tr></thead><tbody id="appointmentRows"></tbody></table></div>
+            </section>
+            <p class="view-footnote">Demo clinicians are placeholders. No real doctor availability is shown, and this preview cannot create, reschedule, or cancel appointments.</p>
+          </section>
+
+          <section class="view-panel" id="view-beds" aria-labelledby="beds-title" hidden>
+            <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-square">▱</span> PHASE 3 · INPATIENT CAPACITY</p><h1 id="beds-title">Bed operations demo</h1><p class="page-subtitle">Synthetic capacity snapshot—no real physical inventory is connected.</p></div><span class="readiness-pill demo-readiness"><i></i> Simulated, not live</span></div>
+            <div class="metric-grid beds-metrics"><article class="metric-card"><span class="metric-icon blue">▱</span><div class="metric-copy"><span class="metric-label">Physical capacity</span><strong id="bedPhysical">1,000</strong><span class="metric-foot">Synthetic demo</span></div></article><article class="metric-card"><span class="metric-icon teal">✓</span><div class="metric-copy"><span class="metric-label">Operational</span><strong id="bedOperational">950</strong><span class="metric-foot">Synthetic demo</span></div></article><article class="metric-card"><span class="metric-icon violet">♙</span><div class="metric-copy"><span class="metric-label">Staffed</span><strong id="bedStaffed">820</strong><span class="metric-foot">Synthetic demo</span></div></article><article class="metric-card"><span class="metric-icon amber">+</span><div class="metric-copy"><span class="metric-label">Available</span><strong id="bedAvailable">96</strong><span class="metric-foot">Synthetic demo</span></div></article></div>
+            <section class="card table-card"><div class="table-card-heading"><div><p class="card-kicker">EXAMPLE WARD CAPACITY</p><h2>Simulated ward snapshot</h2></div><span class="table-status demo-status"><i></i> Scenario only</span></div><div class="table-scroll"><table><thead><tr><th>Ward example</th><th>Demo physical beds</th><th>Demo occupied</th><th>Demo available</th><th>Sample status</th></tr></thead><tbody id="wardRows"></tbody></table></div></section>
+            <p class="view-footnote">All counts are synthetic UI demo values, not a census or bed availability. Do not use for patient placement. Real allocation requires a connected database and concurrency-safe workflow.</p>
+          </section>
+
+          <section class="view-panel" id="view-emergency" aria-labelledby="emergency-title" hidden>
+            <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-square">✚</span> PHASE 4 · EMERGENCY RESPONSE</p><h1 id="emergency-title">Emergency & fleet demo</h1><p class="page-subtitle">Illustrative queue and fleet statuses; not connected to dispatch or GPS.</p></div><span class="readiness-pill demo-readiness"><i></i> Simulated, no GPS</span></div>
+            <div class="integration-banner"><span class="integration-icon">⌖</span><span><strong>Vehicle locations and ETAs are intentionally not shown</strong><small>These fleet status counts are synthetic examples only. No dispatch service, vehicle telemetry, GPS, or routing provider is connected.</small></span></div>
+            <div class="table-summary"><div><span class="summary-label">Fleet planning target</span><strong>30 <small>vehicles</small></strong></div><div><span class="summary-label">Available in demo</span><strong id="fleetAvailable">12 <small>simulated</small></strong></div><div><span class="summary-label">Emergency arrivals</span><strong id="emergencyDemoCount">18 <small>demo today</small></strong></div><span class="over-target-badge">No live tracking</span></div>
+            <section class="card table-card"><div class="table-card-heading"><div><p class="card-kicker">SYNTHETIC FLEET STATUS EXAMPLES</p><h2>Example ambulance board</h2></div><span class="table-status demo-status"><i></i> No vehicle locations</span></div><div class="table-scroll"><table><thead><tr><th>Demo vehicle</th><th>Capability example</th><th>Status example</th><th>Location</th><th>ETA</th></tr></thead><tbody id="ambulanceRows"></tbody></table></div></section>
+            <section class="card table-card subtable-card"><div class="table-card-heading"><div><p class="card-kicker">SYNTHETIC INTAKE EXAMPLES</p><h2>Emergency arrival queue</h2></div><span class="table-status demo-status"><i></i> No clinical triage</span></div><div class="table-scroll"><table><thead><tr><th>Demo case</th><th>Arrival source</th><th>Queue state</th><th>Receiving unit</th><th>Location data</th></tr></thead><tbody id="emergencyRows"></tbody></table></div></section>
+            <p class="view-footnote">Do not use demo statuses for dispatch, clinical triage, or patient coordination. No actual ambulances, calls, GPS points, or travel estimates are represented.</p>
+          </section>
+
+          <section class="view-panel" id="view-diagnostics" aria-labelledby="diagnostics-title" hidden>
+            <div class="page-heading"><div><p class="eyebrow"><span class="eyebrow-square">⌬</span> PHASE 5 · DIAGNOSTICS & MEDICINES</p><h1 id="diagnostics-title">Diagnostics & pharmacy demo</h1><p class="page-subtitle">Synthetic workflow examples only—no real orders, results, or inventory.</p></div><span class="readiness-pill demo-readiness"><i></i> Not clinical data</span></div>
+            <div class="table-summary"><div><span class="summary-label">Pending lab orders</span><strong id="labDemoPending">34 <small>demo examples</small></strong></div><div><span class="summary-label">Results released</span><strong>0 <small>simulated</small></strong></div><div><span class="summary-label">Medicine stock</span><strong>— <small>not connected</small></strong></div><span class="over-target-badge">No clinical results</span></div>
+            <section class="card table-card"><div class="table-card-heading"><div><p class="card-kicker">SYNTHETIC ORDER STATUS EXAMPLES</p><h2>Laboratory workflow</h2></div><span class="table-status demo-status"><i></i> No results</span></div><div class="table-scroll"><table><thead><tr><th>Demo order</th><th>Investigation example</th><th>Workflow state</th><th>Verification</th></tr></thead><tbody id="labRows"></tbody></table></div></section>
+            <section class="card table-card subtable-card"><div class="table-card-heading"><div><p class="card-kicker">INVENTORY INTEGRATION REQUIRED</p><h2>Pharmacy & stock</h2></div><span class="table-status demo-status"><i></i> Not connected</span></div><div class="table-scroll"><table><thead><tr><th>Catalog example</th><th>Stock quantity</th><th>Batch & expiry</th><th>Dispensing</th></tr></thead><tbody><tr><td>Catalog setup required</td><td>Not connected</td><td>No batch data</td><td>Not enabled</td></tr></tbody></table></div></section>
+            <p class="view-footnote">No clinical results, prescriptions, or real medication inventory are shown. Demo workflow states are not verified findings and must not guide patient care.</p>
+          </section>
+
+          <footer class="page-footer"><span>Gaurang Hospital Group <span>·</span> Development workspace</span><span>Preview data only · Not for clinical use</span></footer>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
